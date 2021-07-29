@@ -1,5 +1,5 @@
-site: Gesko
-title: Gesko
+site: cwleung
+title: cwleung's blog
 description: >-
   just a minimalist, personal blog
 googlewebfonts: Fira+Code:wght@400;500;700
@@ -9,16 +9,16 @@ repo: https://github.com/p0wex/Gesko # site repo [optional]
 data-theme: dark # default theme "dark" | "light"
 
 author:
-  name: p0wex
+  name: cwleung
   bio: just a minimalist, personal blog
-  username: p0wex # general username
-  github: p0wex # github username
-  twitter: P0Wex # twitter username
+  username: cwleung # general username
+  github: cwleung # github username
+  twitter: null # twitter username
   email: your-email@email.com # email adress
 
 # URL settings
 url: "https://powex.ml" #
-baseurl: "/Gesko" # leave blank if not wishd
+baseurl: "/cwleung" # leave blank if not wishd
 permalink: "https://powex.ml/Gesko/"
 permalink: pretty 
 
