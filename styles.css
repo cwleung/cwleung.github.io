@@ -32,13 +32,6 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Sections */
-section {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 #hero {
     text-align: center;
     background: #f4f4f4;
@@ -98,4 +91,96 @@ footer {
 #publications li {
     margin-bottom: 1rem;
     line-height: 1.5;
+}
+
+/* Section Styling */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Education Styling */
+.education-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.education-item:last-child {
+    border-bottom: none;
+}
+
+.education-item h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.date {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+/* Skills Styling */
+.skill-category {
+    margin-bottom: 1.5rem;
+}
+
+.skill-category h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.skill-category p {
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Awards and Certificates Styling */
+#awards ul, #certificates ul {
+    list-style: none;
+    padding: 0;
+}
+
+#awards li, #certificates li {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+#awards li:last-child, #certificates li:last-child {
+    border-bottom: none;
+}
+
+.organization {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Languages Styling */
+#languages ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+#languages li {
+    padding: 0.5rem 1rem;
+    background: #f5f5f5;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 2rem 1rem;
+    }
+
+    #languages ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
