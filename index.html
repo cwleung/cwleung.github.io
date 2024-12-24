@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Derek Leung - ML Engineer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Add Bootstrap or other CSS framework if desired -->
 </head>
 <body>
 <header>
@@ -35,13 +34,24 @@
         <h2>Featured Projects</h2>
 
         <div class="project">
+            <h3>Kaggle Participation</h3>
+            <p>Participated in Kaggle competitions and Playgrounds</p>
+            <ul>
+                <li>Time-series forecasting, image classification, and NLP tasks</li>
+                <li>Bayesian prediction on tabular data</li>
+                <li>Gaussian Process over time-series data</li>
+            </ul>
+            <a href="https://github.com/cwleung/Kaggle" class="button">View Profile</a>
+        </div>
+
+        <div class="project">
             <h3>Probabilistic ML Framework</h3>
             <p>A machine learning framework for probabilistic ML model implementations using NumPy and PyTorch.</p>
             <ul>
                 <li>Implementations of Naive Bayes, Bayesian Linear Regression, Gaussian Process</li>
                 <li>ADVI implementation for large-scale dataset training</li>
             </ul>
-            <a href="[Your GitHub Link]" class="button">View Project</a>
+            <a href="https://github.com/cwleung/pml" class="button">View Project</a>
         </div>
 
         <div class="project">
@@ -51,7 +61,7 @@
                 <li>4% improvement in topic coherence scores</li>
                 <li>Integration of transformer embeddings with traditional topic models</li>
             </ul>
-            <a href="[Your GitHub Link]" class="button">View Project</a>
+            <a href="https://github.com/cwleung/TECTM" class="button">View Project</a>
         </div>
 
         <div class="project">
@@ -61,7 +71,7 @@
                 <li>Custom kernel configurations for temporal and spatial information</li>
                 <li>4% improvement in topic coherence scores</li>
             </ul>
-            <a href="[Your GitHub Link]" class="button">View Project</a>
+            <a href="https://github.com/cwleung/DTMTIR" class="button">View Project</a>
         </div>
     </section>
 
@@ -77,10 +87,33 @@
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: cwleung@duck.com</p>
+        <p>Email: <span id="email"></span></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/cw-leung/">cw-leung</a></p>
-        <p>GitHub: <a href="[Your GitHub Profile]">[Your GitHub Username]</a></p>
+        <p>GitHub: <a href="https://github.com/cwleung">Derek Leung @ Github</a></p>
     </section>
+
+    <script>
+        function decodeEmail() {
+            const coded = "YFTMcvB@wcYS.YZx"
+            const key = "aBC7DEFGHIJKLMNOPQRSTUVWXYZbcdefghijklmnopqrstuvwxyz0123456789@."
+            const shift = 13
+            let decoded = ""
+
+            for(let i = 0; i < coded.length; i++) {
+                let idx = key.indexOf(coded.charAt(i));
+                if(idx > -1) {
+                    let newIdx = (idx - shift) % key.length;
+                    if(newIdx < 0) newIdx += key.length;
+                    decoded += key.charAt(newIdx);
+                } else {
+                    decoded += coded.charAt(i);
+                }
+            }
+            document.getElementById('email').innerHTML = decoded;
+        }
+
+        window.onload = decodeEmail;
+    </script>
 </main>
 
 <footer>
