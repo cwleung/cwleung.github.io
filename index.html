@@ -94,22 +94,12 @@
 
     <script>
         function decodeEmail() {
-            const coded = "YFTMcvB@wcYS.YZx"
-            const key = "aBC7DEFGHIJKLMNOPQRSTUVWXYZbcdefghijklmnopqrstuvwxyz0123456789@."
-            const shift = 13
-            let decoded = ""
-
-            for(let i = 0; i < coded.length; i++) {
-                let idx = key.indexOf(coded.charAt(i));
-                if(idx > -1) {
-                    let newIdx = (idx - shift) % key.length;
-                    if(newIdx < 0) newIdx += key.length;
-                    decoded += key.charAt(newIdx);
-                } else {
-                    decoded += coded.charAt(i);
-                }
+            const encoded = [99, 119, 108, 101, 117, 110, 103, 64, 100, 117, 99, 107, 46, 99, 111, 109];
+            let decoded = '';
+            for(let i = 0; i < encoded.length; i++) {
+                decoded += String.fromCharCode(encoded[i]);
             }
-            document.getElementById('email').innerHTML = decoded;
+            document.getElementById('email').innerHTML = '<a href="mailto:' + decoded + '">' + decoded + '</a>';
         }
 
         window.onload = decodeEmail;
