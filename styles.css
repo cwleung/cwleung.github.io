@@ -425,3 +425,113 @@ main {
     transition: transform 0.2s ease;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+
+/* experiences Section Styling */
+#experiences {
+    background: var(--section-bg);
+}
+
+.experiences-item {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.experiences-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.experiences-header {
+    margin-bottom: 1.5rem;
+}
+
+.experiences-header h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.experiences-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.company {
+    font-weight: 500;
+}
+
+.location, .date {
+    color: #636e72;
+}
+
+.experiences-description {
+    color: #636e72;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.tech-label {
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.tech-item {
+    background: #f1f2f6;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+}
+
+.achievements {
+    list-style-type: none;
+    padding: 0;
+}
+
+.achievements li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #636e72;
+}
+
+.achievements li::before {
+    content: "•";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .experiences-item {
+        padding: 1.5rem;
+    }
+
+    .experiences-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .tech-stack {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
