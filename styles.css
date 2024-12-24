@@ -274,14 +274,10 @@ nav ul li a:hover {
     background: var(--section-bg);
 }
 
-/* Projects Section */
-#projects {
-    background: var(--section-bg);
-}
-
+/* Projects Styling */
 .project {
-    margin-bottom: 2rem;
-    padding: 2rem;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -290,12 +286,22 @@ nav ul li a:hover {
 
 .project:hover {
     transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .project h3 {
-    color: var(--primary-color);
     margin-bottom: 1rem;
-    font-size: 1.3rem;
+}
+
+.project h3 a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.project h3 a:hover {
+    color: #0069d9;
+    text-decoration: underline;
 }
 
 .project p {
@@ -305,39 +311,19 @@ nav ul li a:hover {
 }
 
 .project ul {
-    list-style: none;
-    margin-bottom: 1.5rem;
+    list-style-type: disc;
+    margin-left: 1.2rem;
+    margin-bottom: 1rem;
+    color: #636e72;
+    font-size: 0.95rem;
 }
 
 .project ul li {
     margin-bottom: 0.5rem;
-    color: #636e72;
-    font-size: 0.95rem;
-    padding-left: 1.5rem;
-    position: relative;
 }
 
-.project ul li::before {
-    content: "•";
-    color: var(--secondary-color);
-    position: absolute;
-    left: 0;
-}
-
-.project .button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: var(--secondary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: background-color 0.2s ease;
-}
-
-.project .button:hover {
-    background: #0069d9;
+.project ul li:last-child {
+    margin-bottom: 0;
 }
 
 /* Footer */
