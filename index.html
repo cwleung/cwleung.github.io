@@ -3,290 +3,490 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derek Leung</title>
+    <title>Derek Leung | Machine Learning Engineer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
     <nav>
+        <a href="#hero" class="nav-brand">Derek Leung</a>
         <ul>
             <li><a href="#hero">About</a></li>
             <li><a href="#experiences">Experience</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#publications">Publications</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
+    <!-- Hero Section -->
     <section id="hero">
-        <h1>Derek Leung</h1>
-        <h2>Machine Learning Engineer</h2>
-        <p>Specializing in NLP, Bayesian Learning, Probabilistic Modeling, and ML Systems</p>
-        <p>A machine learning practitioner specializing in NLP and probabilistic modeling, with proven experience in developing end-to-end ML solutions. Strong background in statistical predictive modeling and Bayesian methods.</p>
+        <div class="hero-status-wrap">
+            <div class="hero-status">
+                <span class="status-dot"></span>
+                Machine Learning Engineer II · Zonda
+            </div>
+        </div>
+        <h1 class="hero-title">Derek Leung</h1>
+        <div class="hero-role">Machine Learning Engineer</div>
+        <p class="hero-tagline">Specializing in NLP, Bayesian Learning, Probabilistic Modeling, and ML Systems</p>
+        <p class="hero-bio">
+            A machine learning practitioner specializing in NLP and probabilistic modeling, with proven experience in developing end-to-end ML solutions. Strong background in statistical predictive modeling and Bayesian methods.
+        </p>
+        <div class="hero-actions">
+            <a href="https://github.com/cwleung" target="_blank" rel="noopener noreferrer" class="action-pill">
+                <svg class="action-icon" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/cw-leung/" target="_blank" rel="noopener noreferrer" class="action-pill">
+                <svg class="action-icon" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn
+            </a>
+            <a href="#publications" class="action-pill">
+                Publications ↓
+            </a>
+            <a href="#contact" class="action-pill pill-primary">
+                Contact
+            </a>
+        </div>
     </section>
 
+    <!-- Experience Section -->
     <section id="experiences">
-        <h2>Experiences</h2>
+        <div class="section-header">
+            <h2>Experience</h2>
+            <span class="section-subtitle">Career Progression</span>
+        </div>
 
         <div class="experiences-item">
-            <div class="experiences-header" style="margin-bottom: 0;">
-                <h3>Machine Learning Engineer II</h3>
+            <div class="experiences-header">
+                <div>
+                    <h3>Machine Learning Engineer II</h3>
+                    <div class="experiences-company">Zonda</div>
+                </div>
                 <div class="experiences-meta">
-                    <span class="company">Zonda</span>
-                    <span class="location">Glasgow, Scotland, United Kingdom</span>
-                    <span class="date">Oct 2025 - Present</span>
+                    <span class="experiences-date">Oct 2025 – Present</span>
+                    <span class="experiences-location">Glasgow, Scotland, United Kingdom</span>
                 </div>
             </div>
         </div>
 
         <div class="experiences-item">
             <div class="experiences-header">
-                <h3>Data and Software Engineer</h3>
+                <div>
+                    <h3>Data and Software Engineer</h3>
+                    <div class="experiences-company">Xerini</div>
+                </div>
                 <div class="experiences-meta">
-                    <span class="company">Xerini</span>
-                    <span class="location">Greater London, England, United Kingdom</span>
-                    <span class="date">Jun 2022 - Oct 2025</span>
+                    <span class="experiences-date">Jun 2022 – Oct 2025</span>
+                    <span class="experiences-location">Greater London, England, United Kingdom</span>
                 </div>
             </div>
-            <div class="experiences-content">
-                <p class="experiences-description">
-                    Worked closely with software engineers, and business stakeholders across multiple departments to deliver end-to-end ML solutions.
-                    Regularly participated in sprint planning and technical discussions to ensure alignment with business objectives.
-                </p>
-                <div class="tech-stack">
-                    <span class="tech-label">Tech Stack:</span>
-                    <span class="tech-item">PyTorch</span>
-                    <span class="tech-item">Numpy</span>
-                    <span class="tech-item">Pandas</span>
-                    <span class="tech-item">Python</span>
-                    <span class="tech-item">Kotlin</span>
-                    <span class="tech-item">React.js</span>
-                    <span class="tech-item">MongoDB</span>
-                    <span class="tech-item">Docker Compose</span>
-                    <span class="tech-item">Azure</span>
-                </div>
-                <ul class="achievements">
-                    <li>Search Classification: Led end-to-end development of a Natural Language Processing system using GRU-based language models for job search optimization, improving search relevancy by over 90%.</li>
-                    <li>3D Defect Classification: Utilized the InceptionNet architecture to create an image classification model, achieving a 90% recall rate for detecting 3D defects.</li>
-                    <li>Symptom Classification: Fine-tuned an SFT Llama 2 model for symptom classification from doctor notes, achieving 91% accuracy.</li>
-                    <li>Agentic Document Retrieval System: Built a native chatbot (non-LangChain, etc) with a Retrieval-Augmented Generation (RAG) system for a large document set (20k+ documents).</li>
-                    <li>Cargo Optimization: Optimized logistics operations by implementing genetic algorithms, achieving 99% placement efficiency.</li>
-                </ul>
+            <p class="experiences-description">
+                Worked closely with software engineers and business stakeholders across multiple departments to deliver end-to-end ML solutions. Regularly participated in sprint planning and technical discussions to ensure alignment with business objectives.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-label">Stack:</span>
+                <span class="tech-item">PyTorch</span>
+                <span class="tech-item">NumPy</span>
+                <span class="tech-item">Pandas</span>
+                <span class="tech-item">Python</span>
+                <span class="tech-item">Kotlin</span>
+                <span class="tech-item">React.js</span>
+                <span class="tech-item">MongoDB</span>
+                <span class="tech-item">Docker Compose</span>
+                <span class="tech-item">Azure</span>
             </div>
+            <ul class="achievements">
+                <li><strong>Search Classification:</strong> Led end-to-end development of a Natural Language Processing system using GRU-based language models for job search optimization, improving search relevancy by over 90%.</li>
+                <li><strong>3D Defect Classification:</strong> Utilized the InceptionNet architecture to create an image classification model, achieving a 90% recall rate for detecting 3D defects.</li>
+                <li><strong>Symptom Classification:</strong> Fine-tuned an SFT Llama 2 model for symptom classification from doctor notes, achieving 91% accuracy.</li>
+                <li><strong>Agentic Document Retrieval System:</strong> Built a native chatbot (non-LangChain, etc.) with a Retrieval-Augmented Generation (RAG) system for a large document set (20k+ documents).</li>
+                <li><strong>Cargo Optimization:</strong> Optimized logistics operations by implementing genetic algorithms, achieving 99% placement efficiency.</li>
+            </ul>
         </div>
 
         <div class="experiences-item">
             <div class="experiences-header">
-                <h3>Front-office Developer</h3>
+                <div>
+                    <h3>Front-office Developer</h3>
+                    <div class="experiences-company">iAsia Online System Limited</div>
+                </div>
                 <div class="experiences-meta">
-                    <span class="company">iAsia Online System Limited</span>
-                    <span class="location">Hong Kong</span>
-                    <span class="date">Jul 2017 - May 2018</span>
+                    <span class="experiences-date">Jul 2017 – May 2018</span>
+                    <span class="experiences-location">Hong Kong</span>
                 </div>
             </div>
-            <div class="experiences-content">
-                <p class="experiences-description">
-                    Worked in a 10-person cross-functional front office team. Responsible for designing, implementing, and maintaining a comprehensive stock trading platform.
-                </p>
-                <div class="tech-stack">
-                    <span class="tech-label">Tech Stack:</span>
-                    <span class="tech-item">Java</span>
-                    <span class="tech-item">C#</span>
-                    <span class="tech-item">Spring</span>
-                    <span class="tech-item">NodeJS</span>
-                    <span class="tech-item">SQL</span>
-                </div>
-                <ul class="achievements">
-                    <li>Designed SQL procedures for auditing and updated account and trade order schemas to meet new requirements.</li>
-                    <li>Built an SMS OTP dispatch system capable of handling requests from up to 80,000 daily active users.</li>
-                </ul>
+            <p class="experiences-description">
+                Worked in a 10-person cross-functional front office team. Responsible for designing, implementing, and maintaining a comprehensive stock trading platform.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-label">Stack:</span>
+                <span class="tech-item">Java</span>
+                <span class="tech-item">C#</span>
+                <span class="tech-item">Spring</span>
+                <span class="tech-item">NodeJS</span>
+                <span class="tech-item">SQL</span>
             </div>
+            <ul class="achievements">
+                <li>Designed SQL procedures for auditing and updated account and trade order schemas to meet new requirements.</li>
+                <li>Built an SMS OTP dispatch system capable of handling requests from up to 80,000 daily active users.</li>
+            </ul>
         </div>
     </section>
 
     <!-- Education Section -->
     <section id="education">
-        <h2>Education</h2>
-        <div class="education-item">
-            <h3>University of Tokyo, Japan</h3>
-            <p class="date">Apr 2020 - Mar 2022</p>
-            <p class="degree">Master in Computer Science | School of Information Science and Technology</p>
-            <p class="thesis">Thesis: Correlated Topic Model with Transformer Embeddings | Supervised by Dr. Akihiko Takano</p>
+        <div class="section-header">
+            <h2>Education</h2>
+            <span class="section-subtitle">Academic Background</span>
         </div>
 
-        <div class="education-item">
-            <h3>Hong Kong Metropolitan University, Hong Kong</h3>
-            <p class="date">Sep 2015 - Jul 2017</p>
-            <p class="degree">B.S. (Hon) in Internet Technology | Department of Technology</p>
-            <p class="thesis">Thesis: Improving Multi-objective Ant Colony Optimization with Local Search | Supervised by Dr. Vanessa Ng</p>
-        </div>
+        <div class="education-grid">
+            <div class="education-item">
+                <div class="edu-header">
+                    <h3>University of Tokyo, Japan</h3>
+                    <span class="date">Apr 2020 – Mar 2022</span>
+                </div>
+                <p class="degree">Master in Computer Science · School of Information Science and Technology</p>
+                <div class="thesis-box">
+                    <p class="thesis"><strong>Thesis:</strong> Correlated Topic Model with Transformer Embeddings<br><strong>Supervised by:</strong> Dr. Akihiko Takano</p>
+                </div>
+            </div>
 
-        <div class="education-item">
-            <h3>Community College of City University, Hong Kong</h3>
-            <p class="date">Sep 2013 - Jul 2015</p>
-            <p class="degree">A.S. in Networking and System Administration | Division of Applied Science and Technology</p>
+            <div class="education-item">
+                <div class="edu-header">
+                    <h3>Hong Kong Metropolitan University, Hong Kong</h3>
+                    <span class="date">Sep 2015 – Jul 2017</span>
+                </div>
+                <p class="degree">B.S. (Hon) in Internet Technology · Department of Technology</p>
+                <div class="thesis-box">
+                    <p class="thesis"><strong>Thesis:</strong> Improving Multi-objective Ant Colony Optimization with Local Search<br><strong>Supervised by:</strong> Dr. Vanessa Ng</p>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="edu-header">
+                    <h3>Community College of City University, Hong Kong</h3>
+                    <span class="date">Sep 2013 – Jul 2015</span>
+                </div>
+                <p class="degree">A.S. in Networking and System Administration · Division of Applied Science and Technology</p>
+            </div>
         </div>
     </section>
+
+    <!-- Featured Projects Section -->
     <section id="projects">
-        <h2>Featured Projects</h2>
-
-        <div class="project">
-            <h3><a href="https://github.com/cwleung/Kaggle">Kaggle Participation</a></h3>
-            <p>Participated in Kaggle competitions and Playgrounds</p>
-            <ul>
-                <li>Time-series forecasting, image classification, and NLP tasks</li>
-                <li>Bayesian prediction on tabular data</li>
-                <li>Gaussian Process over time-series data</li>
-            </ul>
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <span class="section-subtitle">Engineering & ML</span>
         </div>
 
-        <div class="project">
-            <h3><a href="https://github.com/cwleung/pml">Probabilistic ML Framework</a></h3>
-            <p>A machine learning framework for probabilistic ML model implementations using NumPy and PyTorch.</p>
-            <ul>
-                <li>Implementations of Naive Bayes, Bayesian Linear Regression, Gaussian Process</li>
-                <li>ADVI implementation for large-scale dataset training</li>
-            </ul>
-        </div>
+        <div class="projects-grid">
+            <div class="project">
+                <div class="project-top">
+                    <div class="project-title-row">
+                        <h3><a href="https://github.com/cwleung/Kaggle" target="_blank" rel="noopener noreferrer">Kaggle Participation</a></h3>
+                        <a href="https://github.com/cwleung/Kaggle" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repository">
+                            <svg class="action-icon" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                    <p class="project-desc">Competitive machine learning benchmarks and playgrounds covering statistical and probabilistic pipelines.</p>
+                    <ul>
+                        <li>Time-series forecasting, image classification, and NLP tasks</li>
+                        <li>Bayesian prediction on tabular data</li>
+                        <li>Gaussian Process over time-series data</li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="project">
-            <h3><a href="https://github.com/cwleung/TECTM">Correlated Topic Model with Transformer Embedding</a></h3>
-            <p>Enhanced topic modeling using transformer-based embeddings, evaluated on 20,000+ documents.</p>
-            <ul>
-                <li>4% improvement in topic coherence scores</li>
-                <li>Integration of transformer embeddings with traditional topic models</li>
-            </ul>
-        </div>
+            <div class="project">
+                <div class="project-top">
+                    <div class="project-title-row">
+                        <h3><a href="https://github.com/cwleung/pml" target="_blank" rel="noopener noreferrer">Probabilistic ML Framework</a></h3>
+                        <a href="https://github.com/cwleung/pml" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repository">
+                            <svg class="action-icon" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                    <p class="project-desc">A modular framework for probabilistic ML implementations using NumPy and PyTorch from first principles.</p>
+                    <ul>
+                        <li>Implementations of Naive Bayes, Bayesian Linear Regression, Gaussian Process</li>
+                        <li>ADVI implementation for large-scale dataset training</li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="project">
-            <h3><a href="https://github.com/cwleung/DTMTIR">Dynamic Topic Modeling with GPLVM</a></h3>
-            <p>Advanced topic modeling using Gaussian Process Latent Variable Models.</p>
-            <ul>
-                <li>Custom kernel configurations for temporal and spatial information</li>
-                <li>4% improvement in topic coherence scores</li>
-            </ul>
+            <div class="project">
+                <div class="project-top">
+                    <div class="project-title-row">
+                        <h3><a href="https://github.com/cwleung/TECTM" target="_blank" rel="noopener noreferrer">Correlated Topic Model (TECTM)</a></h3>
+                        <a href="https://github.com/cwleung/TECTM" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repository">
+                            <svg class="action-icon" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                    <p class="project-desc">Enhanced topic modeling incorporating transformer representations, evaluated systematically on 20,000+ documents.</p>
+                    <ul>
+                        <li>4% improvement in topic coherence scores</li>
+                        <li>Integration of transformer embeddings with traditional generative topic models</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-top">
+                    <div class="project-title-row">
+                        <h3><a href="https://github.com/cwleung/DTMTIR" target="_blank" rel="noopener noreferrer">Dynamic Topic Modeling (GPLVM)</a></h3>
+                        <a href="https://github.com/cwleung/DTMTIR" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repository">
+                            <svg class="action-icon" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                    <p class="project-desc">Advanced dynamic topic modeling utilizing Gaussian Process Latent Variable Models for non-linear temporal dynamics.</p>
+                    <ul>
+                        <li>Custom kernel configurations for temporal and spatial document information</li>
+                        <li>4% improvement in topic coherence scores</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Publications Section -->
     <section id="publications">
-        <h2>Publications</h2>
+        <div class="section-header">
+            <h2>Publications</h2>
+            <span class="section-subtitle">Peer-Reviewed & Research Works</span>
+        </div>
+
         <ul>
-            <li>
+            <li class="pub-card">
+                <div class="pub-header">
+                    <span class="pub-badge badge-conf">Conference Paper</span>
+                </div>
                 <div class="pub-title">
-                    <a href="https://link.springer.com/chapter/10.1007/978-3-030-04179-3_50" target="_blank">
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-030-04179-3_50" target="_blank" rel="noopener noreferrer">
                         Combining Two-Phase Local Search with Multi-objective Ant Colony Optimization
                     </a>
                 </div>
                 <div class="pub-authors">
-                    <span class="author-self">CW Leung</span>,
-                    <span class="author">SC Ng</span>,
-                    <span class="author">Andrew K. Lui</span>
+                    <span class="author-self">CW Leung</span>, <span>SC Ng</span>, <span>Andrew K. Lui</span>
                 </div>
-                <div class="pub-venue">ICONIP 2018</div>
+                <div class="pub-footer">
+                    <span class="pub-venue">ICONIP 2018 · International Conference on Neural Information Processing</span>
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-030-04179-3_50" target="_blank" rel="noopener noreferrer" class="pub-action-link">
+                        Springer DOI ↗
+                    </a>
+                </div>
             </li>
-            <li>
+
+            <li class="pub-card">
+                <div class="pub-header">
+                    <span class="pub-badge badge-thesis">Master's Thesis</span>
+                </div>
                 <div class="pub-title">
-                    <a href="https://drive.google.com/file/d/1RsSbOdjHszjITEGwOYC4jG5VNaAv7QwZ/view?usp=drive_link" target="_blank">
+                    <a href="https://drive.google.com/file/d/1RsSbOdjHszjITEGwOYC4jG5VNaAv7QwZ/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                         Correlated Topic Model with Transformer Embeddings
                     </a>
                 </div>
                 <div class="pub-authors">
-                    <span class="author-self">Chun-Wa Leung</span>,
-                    <span class="author">Akihiko Takano</span>,
-                    <span class="author">Takeshi Abekawa</span>
+                    <span class="author-self">Chun-Wa Leung</span>, <span>Akihiko Takano</span>, <span>Takeshi Abekawa</span>
                 </div>
-                <div class="pub-venue">Master's Thesis, 2022</div>
+                <div class="pub-footer">
+                    <span class="pub-venue">Master's Thesis, University of Tokyo, 2022</span>
+                    <a href="https://drive.google.com/file/d/1RsSbOdjHszjITEGwOYC4jG5VNaAv7QwZ/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="pub-action-link">
+                        View Thesis ↗
+                    </a>
+                </div>
             </li>
-            <li>
+
+            <li class="pub-card">
+                <div class="pub-header">
+                    <span class="pub-badge badge-preprint">Preprint</span>
+                </div>
                 <div class="pub-title">
-                    <a href="https://drive.google.com/file/d/1sJVp_e2T59oNLUBZ8ufzaIaUBVyVv4qf/view?usp=drive_link" target="_blank">
+                    <a href="https://drive.google.com/file/d/1sJVp_e2T59oNLUBZ8ufzaIaUBVyVv4qf/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                         Topic Model on learning Inter and Intra Topic Structure
                     </a>
                 </div>
                 <div class="pub-authors">
-                    <span class="author-self">Chun-Wa Leung</span>,
-                    <span class="author">Akihiko Takano</span>,
-                    <span class="author">Takeshi Abekawa</span>
+                    <span class="author-self">Chun-Wa Leung</span>, <span>Akihiko Takano</span>, <span>Takeshi Abekawa</span>
                 </div>
-                <div class="pub-venue">Pre-print, 2021</div>
+                <div class="pub-footer">
+                    <span class="pub-venue">Pre-print, 2021</span>
+                    <a href="https://drive.google.com/file/d/1sJVp_e2T59oNLUBZ8ufzaIaUBVyVv4qf/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="pub-action-link">
+                        View Paper ↗
+                    </a>
+                </div>
             </li>
-            <li>
+
+            <li class="pub-card">
+                <div class="pub-header">
+                    <span class="pub-badge badge-preprint">Preprint</span>
+                </div>
                 <div class="pub-title">
-                    <a href="https://drive.google.com/file/d/1iDyQNNYprh7Q_dBmeMMAKXU1dilBwiAv/view?usp=drive_link" target="_blank">
+                    <a href="https://drive.google.com/file/d/1iDyQNNYprh7Q_dBmeMMAKXU1dilBwiAv/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                         Dynamic Topic Modeling via Gaussian Process Latent Variable Process
                     </a>
                 </div>
                 <div class="pub-authors">
-                    <span class="author-self">Chun-Wa Leung</span>,
-                    <span class="author">Akihiko Takano</span>,
-                    <span class="author">Takeshi Abekawa</span>
+                    <span class="author-self">Chun-Wa Leung</span>, <span>Akihiko Takano</span>, <span>Takeshi Abekawa</span>
                 </div>
-                <div class="pub-venue">Pre-print, 2022</div>
+                <div class="pub-footer">
+                    <span class="pub-venue">Pre-print, 2022</span>
+                    <a href="https://drive.google.com/file/d/1iDyQNNYprh7Q_dBmeMMAKXU1dilBwiAv/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="pub-action-link">
+                        View Paper ↗
+                    </a>
+                </div>
             </li>
         </ul>
     </section>
+
+    <!-- Core Skills Section -->
     <section id="skills">
-        <h2>Core Skills</h2>
-
-        <div class="skill-category">
-            <h3>Programming Languages</h3>
-            <p>Python, Java, Kotlin, Scala, C#, C/C++, PHP, JavaScript, Bash</p>
+        <div class="section-header">
+            <h2>Core Skills</h2>
+            <span class="section-subtitle">Technical Competencies</span>
         </div>
 
-        <div class="skill-category">
-            <h3>Data Stack</h3>
-            <p>SQL, R (and ggplot2), TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, spaCy, Seaborn, Matplotlib, Pyro, PyMC3</p>
-        </div>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-chips-wrap">
+                    <span class="skill-chip">Python</span>
+                    <span class="skill-chip">Java</span>
+                    <span class="skill-chip">Kotlin</span>
+                    <span class="skill-chip">Scala</span>
+                    <span class="skill-chip">C#</span>
+                    <span class="skill-chip">C/C++</span>
+                    <span class="skill-chip">PHP</span>
+                    <span class="skill-chip">JavaScript</span>
+                    <span class="skill-chip">Bash</span>
+                </div>
+            </div>
 
-        <div class="skill-category">
-            <h3>Web & Mobile</h3>
-            <p>React.js, Android, Spring, Node.js, Express</p>
-        </div>
+            <div class="skill-category">
+                <h3>Machine Learning & Bayesian</h3>
+                <div class="skill-chips-wrap">
+                    <span class="skill-chip">PyTorch</span>
+                    <span class="skill-chip">TensorFlow</span>
+                    <span class="skill-chip">Scikit-learn</span>
+                    <span class="skill-chip">Bayesian Learning</span>
+                    <span class="skill-chip">Probabilistic ML</span>
+                    <span class="skill-chip">GPyTorch</span>
+                    <span class="skill-chip">Pyro</span>
+                    <span class="skill-chip">PyMC</span>
+                    <span class="skill-chip">NumPy</span>
+                    <span class="skill-chip">Pandas</span>
+                </div>
+            </div>
 
-        <div class="skill-category">
-            <h3>Machine Learning</h3>
-            <p>PyTorch, TensorFlow, Scikit-learn, Bayesian Learning, Probabilistic ML models, Numpy, GPyTorch, Pyro, PyMC, Pandas</p>
-        </div>
+            <div class="skill-category">
+                <h3>Natural Language Processing</h3>
+                <div class="skill-chips-wrap">
+                    <span class="skill-chip">Hugging Face</span>
+                    <span class="skill-chip">LLMs</span>
+                    <span class="skill-chip">RAG Systems</span>
+                    <span class="skill-chip">Knowledge Graphs</span>
+                    <span class="skill-chip">spaCy</span>
+                    <span class="skill-chip">BERT</span>
+                    <span class="skill-chip">LLaMA</span>
+                    <span class="skill-chip">NLTK</span>
+                </div>
+            </div>
 
-        <div class="skill-category">
-            <h3>Natural Language Processing</h3>
-            <p>Hugging Face, LLMs & RAG Systems, Knowledge Graphs, NLP (spaCy, BERT, LLaMA, NLTK)</p>
-        </div>
+            <div class="skill-category">
+                <h3>Data Stack & Analysis</h3>
+                <div class="skill-chips-wrap">
+                    <span class="skill-chip">SQL</span>
+                    <span class="skill-chip">R</span>
+                    <span class="skill-chip">ggplot2</span>
+                    <span class="skill-chip">Seaborn</span>
+                    <span class="skill-chip">Matplotlib</span>
+                    <span class="skill-chip">Pandas</span>
+                    <span class="skill-chip">NumPy</span>
+                </div>
+            </div>
 
-        <div class="skill-category">
-            <h3>Others</h3>
-            <p>MongoDB, Redis, Linux, GCP, AWS, Azure Cloud, Docker, Git, SVN, Maven, Gradle</p>
+            <div class="skill-category">
+                <h3>Web & Mobile Systems</h3>
+                <div class="skill-chips-wrap">
+                    <span class="skill-chip">React.js</span>
+                    <span class="skill-chip">Android</span>
+                    <span class="skill-chip">Spring</span>
+                    <span class="skill-chip">Node.js</span>
+                    <span class="skill-chip">Express</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Infrastructure & Cloud</h3>
+                <div class="skill-chips-wrap">
+                    <span class="skill-chip">Docker</span>
+                    <span class="skill-chip">Docker Compose</span>
+                    <span class="skill-chip">Azure</span>
+                    <span class="skill-chip">AWS</span>
+                    <span class="skill-chip">GCP</span>
+                    <span class="skill-chip">Linux</span>
+                    <span class="skill-chip">MongoDB</span>
+                    <span class="skill-chip">Redis</span>
+                    <span class="skill-chip">Git</span>
+                    <span class="skill-chip">Maven</span>
+                    <span class="skill-chip">Gradle</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Certificates Section -->
     <section id="certificates">
-        <h2>Certificates</h2>
-        <ul>
-            <li>
+        <div class="section-header">
+            <h2>Certificates</h2>
+            <span class="section-subtitle">Professional Credentials</span>
+        </div>
+
+        <ul class="certificates-grid">
+            <li class="cert-card">
                 <h3>Cisco Certified Network Associate (CCNA)</h3>
-                <p class="date">Apr 2015</p>
-                <p class="organization">Cisco</p>
+                <div class="cert-meta">
+                    <span class="cert-org">Cisco</span>
+                    <span class="cert-date">Apr 2015</span>
+                </div>
             </li>
-            <li>
+            <li class="cert-card">
                 <h3>Microsoft Certified Professional (MCP)</h3>
-                <p class="date">Jun 2015</p>
-                <p class="organization">Microsoft</p>
+                <div class="cert-meta">
+                    <span class="cert-org">Microsoft</span>
+                    <span class="cert-date">Jun 2015</span>
+                </div>
             </li>
         </ul>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <span id="email"></span></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/cw-leung/">cw-leung</a></p>
-        <p>GitHub: <a href="https://github.com/cwleung">Derek Leung</a></p>
+        <div class="contact-box">
+            <h3>Get In Touch</h3>
+            <p class="contact-tagline">Feel free to reach out for research collaboration, machine learning engineering, or opportunities.</p>
+            <div class="contact-links">
+                <span id="email-container">
+                    <span id="email"></span>
+                </span>
+                <a href="https://www.linkedin.com/in/cw-leung/" target="_blank" rel="noopener noreferrer" class="contact-pill">
+                    <svg class="action-icon" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/cwleung" target="_blank" rel="noopener noreferrer" class="contact-pill">
+                    <svg class="action-icon" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
     </section>
 
     <script>
@@ -296,9 +496,11 @@
             for(let i = 0; i < encoded.length; i++) {
                 decoded += String.fromCharCode(encoded[i]);
             }
-            document.getElementById('email').innerHTML = '<a href="mailto:' + decoded + '">' + decoded + '</a>';
+            const emailEl = document.getElementById('email');
+            if (emailEl) {
+                emailEl.innerHTML = '<a href="mailto:' + decoded + '" class="contact-pill pill-email"><svg class="action-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> ' + decoded + '</a>';
+            }
         }
-
         window.onload = decodeEmail;
     </script>
 </main>
