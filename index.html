@@ -80,7 +80,7 @@
                 Building LLM agent systems for data analytics, with a focus on automated evaluation and optimization of LLM workflows.
             </p>
             <ul class="achievements">
-                <li><strong>Agentic Dashboard Copilot:</strong> Designed and built a four-level agentic copilot, progressing from RAG-based Q&amp;A, to answering questions over dashboard data payloads of up to 4 MB, to editing existing dashboards, to generating full dashboards from natural-language requests. Now in internal pilot; cut latency for dashboard generation from 2–3 min to ~40 s, dashboard edits from 50 s to 10 s, and data queries from 60 s to 10 s.</li>
+                <li><strong>Agentic Dashboard Copilot:</strong> Designed and built a four-level agentic copilot, progressing from RAG-based Q&amp;A, to answering questions over dashboard data payloads of up to 4 MB, to editing existing dashboards, to generating full dashboards from natural-language requests. Now in internal pilot; using JSON Patch edits in place of full regeneration and parallel tool calling, cut latency for dashboard generation from 2–3 min to ~40 s, dashboard edits from 50 s to 10 s, and data queries from 60 s to 10 s.</li>
                 <li><strong>Reflective Prompt Optimization (GEPA):</strong> Optimized the dashboard-generation workflow with GEPA, a reflective, Pareto-based prompt-evolution method, using an automated evaluator as the feedback signal; raised evaluator score from [X] to [Y] over [N] optimization rounds.</li>
                 <li><strong>LLM Evaluation:</strong> Built the automated evaluator ([LLM-as-judge / rule-based checks]) and a [N]-case benchmark set used to gate prompt and model changes before release.</li>
             </ul>
