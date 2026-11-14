@@ -14,7 +14,8 @@
     
     --text-main: #181716;
     --text-muted: #57534e;
-    --text-subtle: #78716c;
+    /* Darkened from #78716c so small mono labels clear WCAG AA (4.5:1) on every surface */
+    --text-subtle: #6b645e;
     
     --border-hairline: #e7e5e0;
     --border-hover: #d3cfc7;
@@ -52,6 +53,8 @@
 
     --max-width: 960px;
     --spacing-section: 4.5rem;
+    --header-height: 60px;
+    --focus-ring: 0 0 0 3px var(--bg-body), 0 0 0 5px var(--accent-ink-hover);
 }
 
 /* Reset & Base */
@@ -63,6 +66,9 @@
 
 html {
     scroll-behavior: smooth;
+    /* Keep in-page anchor targets clear of the sticky header
+       (sections already carry --spacing-section of top padding) */
+    scroll-padding-top: max(0px, calc(var(--header-height) - var(--spacing-section) + 1rem));
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
 }
@@ -85,10 +91,12 @@ h1, h2, h3, h4 {
     font-weight: 600;
     line-height: 1.28;
     letter-spacing: -0.015em;
+    text-wrap: balance;
 }
 
 p {
     color: var(--text-muted);
+    text-wrap: pretty;
 }
 
 a {
@@ -101,6 +109,42 @@ a:hover {
     color: var(--accent-ink-hover);
 }
 
+/* Accessibility: visible keyboard focus and skip link */
+:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+    border-radius: var(--radius-sm);
+}
+
+.action-pill:focus-visible,
+.contact-pill:focus-visible {
+    border-radius: var(--radius-full);
+}
+
+main:focus {
+    outline: none;
+}
+
+.skip-link {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 200;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: var(--text-main);
+    border-radius: var(--radius-sm);
+    transform: translateY(-200%);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    color: #ffffff;
+    transform: translateY(0);
+}
+
 /* Navigation */
 header {
     position: sticky;
@@ -110,7 +154,6 @@ header {
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border-hairline);
-    transition: all 0.2s ease;
 }
 
 nav {
@@ -151,7 +194,7 @@ nav ul li a {
     color: var(--text-muted);
     padding: 0.45rem 0.8rem;
     border-radius: var(--radius-sm);
-    transition: all 0.18s ease;
+    transition: color 0.18s ease, background-color 0.18s ease;
 }
 
 nav ul li a:hover {
@@ -289,7 +332,7 @@ section {
     background: var(--bg-surface);
     color: var(--text-main);
     box-shadow: var(--shadow-sm);
-    transition: all 0.18s ease;
+    transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
 }
 
 .action-pill:hover {
@@ -325,13 +368,6 @@ section {
     padding: 1.75rem;
     margin-bottom: 1.35rem;
     box-shadow: var(--shadow-card);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.editorial-card:hover {
-    border-color: var(--border-hover);
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-2px);
 }
 
 /* Experience Section */
@@ -342,13 +378,6 @@ section {
     padding: 1.75rem;
     margin-bottom: 1.5rem;
     box-shadow: var(--shadow-card);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.experiences-item:hover {
-    border-color: var(--border-hover);
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-2px);
 }
 
 .experiences-header {
@@ -429,12 +458,6 @@ section {
     padding: 0.2rem 0.55rem;
     border-radius: var(--radius-sm);
     border: 1px solid rgba(0,0,0,0.03);
-    transition: background 0.15s ease;
-}
-
-.tech-item:hover {
-    background: var(--bg-tag-hover);
-    color: var(--text-main);
 }
 
 .achievements {
@@ -445,7 +468,7 @@ section {
 }
 
 .achievements li {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
     position: relative;
     padding-left: 1.35rem;
@@ -478,13 +501,6 @@ section {
     border-radius: var(--radius-md);
     padding: 1.75rem;
     box-shadow: var(--shadow-card);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.education-item:hover {
-    border-color: var(--border-hover);
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-2px);
 }
 
 .edu-header {
@@ -553,17 +569,10 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.project:hover {
-    border-color: var(--border-hover);
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-2px);
-}
-
-.project-top {
-    margin-bottom: 1rem;
+.project-top > :last-child {
+    margin-bottom: 0;
 }
 
 .project-title-row {
@@ -602,7 +611,7 @@ section {
 }
 
 .project-desc {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
     line-height: 1.6;
     margin-bottom: 1rem;
@@ -617,7 +626,7 @@ section {
 }
 
 .project ul li {
-    font-size: 0.88rem;
+    font-size: 0.92rem;
     color: var(--text-muted);
     position: relative;
     padding-left: 1.2rem;
@@ -646,13 +655,6 @@ section {
     border-radius: var(--radius-md);
     padding: 1.75rem;
     box-shadow: var(--shadow-card);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.pub-card:hover {
-    border-color: var(--border-hover);
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-2px);
 }
 
 .pub-header {
@@ -755,7 +757,7 @@ section {
     background: var(--accent-ink-subtle);
     border: 1px solid var(--accent-ink-border);
     border-radius: var(--radius-sm);
-    transition: all 0.15s ease;
+    transition: color 0.15s ease, background-color 0.15s ease;
 }
 
 .pub-action-link:hover {
@@ -763,37 +765,38 @@ section {
     color: var(--accent-ink-hover);
 }
 
-/* Skills Section */
+/* Skills Section
+   One card with a row per category (label | chips). Avoids the orphaned
+   seventh card and the empty space short categories left in a 2-col grid. */
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.35rem;
-}
-
-.skill-category {
+    display: flex;
+    flex-direction: column;
     background: var(--bg-surface);
     border: 1px solid var(--border-hairline);
     border-radius: var(--radius-md);
-    padding: 1.65rem;
     box-shadow: var(--shadow-card);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.skill-category:hover {
-    border-color: var(--border-hover);
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-2px);
+.skill-category {
+    display: grid;
+    grid-template-columns: 16.5rem 1fr;
+    gap: 0.6rem 1.5rem;
+    align-items: start;
+    padding: 1.1rem 1.65rem;
+    border-bottom: 1px solid var(--border-hairline);
+}
+
+.skill-category:last-child {
+    border-bottom: none;
 }
 
 .skill-category h3 {
     font-family: var(--font-sans);
-    font-size: 1.05rem;
+    font-size: 0.98rem;
     font-weight: 600;
+    letter-spacing: 0;
     color: var(--text-main);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    padding-top: 0.25rem;
 }
 
 .skill-chips-wrap {
@@ -810,13 +813,6 @@ section {
     padding: 0.3rem 0.65rem;
     border-radius: var(--radius-sm);
     border: 1px solid rgba(0,0,0,0.03);
-    transition: all 0.15s ease;
-}
-
-.skill-chip:hover {
-    background: var(--bg-tag-hover);
-    color: var(--text-main);
-    transform: translateY(-1px);
 }
 
 /* Certificates Section */
@@ -833,13 +829,6 @@ section {
     border-radius: var(--radius-md);
     padding: 1.5rem;
     box-shadow: var(--shadow-card);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.cert-card:hover {
-    border-color: var(--border-hover);
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-2px);
 }
 
 .cert-card h3 {
@@ -883,7 +872,7 @@ section {
     margin: 0 auto;
 }
 
-.contact-box h3 {
+.contact-box h2 {
     font-size: 1.85rem;
     margin-bottom: 0.75rem;
 }
@@ -916,7 +905,7 @@ section {
     background: var(--bg-body);
     color: var(--text-main);
     box-shadow: var(--shadow-sm);
-    transition: all 0.18s ease;
+    transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
 }
 
 .contact-pill:hover {
@@ -956,22 +945,51 @@ footer p {
 @media (max-width: 768px) {
     :root {
         --spacing-section: 3rem;
+        --header-height: 52px;
     }
 
+    /* One compact row: brand on the left, links scroll sideways.
+       Previously the header stacked into ~124px of sticky chrome. */
     nav {
-        padding: 0.75rem 1rem;
-        flex-direction: column;
-        gap: 0.75rem;
+        padding: 0 0 0 1rem;
+        gap: 0.5rem;
+        min-height: var(--header-height);
+    }
+
+    .nav-brand {
+        flex-shrink: 0;
+        font-size: 1.05rem;
     }
 
     nav ul {
-        justify-content: center;
-        gap: 0.15rem;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 0;
+        padding-right: 1.5rem;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        /* Fade hints that more links are off-screen */
+        -webkit-mask-image: linear-gradient(to right, transparent 0, #000 0.75rem, #000 calc(100% - 2rem), transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0, #000 0.75rem, #000 calc(100% - 2rem), transparent 100%);
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none;
     }
 
     nav ul li a {
-        padding: 0.35rem 0.55rem;
-        font-size: 0.82rem;
+        display: block;
+        padding: 0.7rem 0.6rem;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
+    main {
+        padding: 0 1rem 3rem;
+    }
+
+    #hero {
+        padding-top: 2rem;
     }
 
     .hero-title {
@@ -980,6 +998,39 @@ footer p {
 
     .hero-role {
         font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-tagline {
+        font-size: 1.02rem;
+    }
+
+    .hero-actions .action-pill {
+        padding: 0.6rem 1rem;
+    }
+
+    /* Heading and subtitle no longer squeeze side by side */
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.72rem;
+    }
+
+    /* Wider text column on small screens */
+    .experiences-item,
+    .education-item,
+    .pub-card,
+    .project {
+        padding: 1.25rem 1.1rem;
     }
 
     .experiences-header {
@@ -988,7 +1039,10 @@ footer p {
     }
 
     .experiences-meta {
-        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.35rem 0.6rem;
         text-align: left;
     }
 
@@ -997,11 +1051,110 @@ footer p {
         gap: 0.35rem;
     }
 
-    .projects-grid, .skills-grid {
+    .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .skill-category {
+        grid-template-columns: 1fr;
+        padding: 1.1rem;
+    }
+
+    .skill-category h3 {
+        padding-top: 0;
     }
 
     .contact-box {
         padding: 2rem 1.25rem;
+    }
+}
+
+/* Respect users who ask for less motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .action-pill:hover,
+    .contact-pill:hover {
+        transform: none;
+    }
+}
+
+/* Print / Save as PDF: a clean, ink-friendly CV */
+@media print {
+    @page {
+        margin: 1.5cm;
+    }
+
+    html {
+        font-size: 12px;
+    }
+
+    body {
+        background: #ffffff;
+    }
+
+    header,
+    .skip-link,
+    .hero-actions,
+    .status-dot,
+    .project-icon-link {
+        display: none !important;
+    }
+
+    main {
+        max-width: none;
+        padding: 0;
+    }
+
+    section {
+        padding-top: 1.5rem;
+    }
+
+    #hero {
+        padding-top: 0;
+    }
+
+    .experiences-item,
+    .education-item,
+    .project,
+    .pub-card,
+    .skills-grid,
+    .cert-card,
+    .contact-box {
+        box-shadow: none;
+        border-color: #d6d3d1;
+    }
+
+    .experiences-item,
+    .education-item,
+    .project,
+    .pub-card,
+    .skill-category,
+    .cert-card {
+        break-inside: avoid;
+    }
+
+    .section-header {
+        break-after: avoid;
+    }
+
+    .contact-pill,
+    .contact-pill.pill-email {
+        box-shadow: none;
+        background: none;
+        color: var(--text-main);
+        border-color: #d6d3d1;
+    }
+
+    footer {
+        padding: 1rem 0;
     }
 }
