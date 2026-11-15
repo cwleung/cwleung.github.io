@@ -35,7 +35,7 @@
             </div>
         </div>
         <h1 class="hero-title">Derek Leung</h1>
-        <div class="hero-role">Machine Learning Engineer</div>
+        <div class="hero-role">Machine Learning Engineer II</div>
         <p class="hero-tagline">Specializing in NLP, Bayesian Learning, Probabilistic Modeling, and ML Systems</p>
         <p class="hero-bio">
             A machine learning practitioner specializing in NLP and probabilistic modeling, with proven experience in developing end-to-end ML solutions. Strong background in statistical predictive modeling and Bayesian methods.
@@ -76,12 +76,26 @@
                     <span class="experiences-location">Glasgow, Scotland, United Kingdom</span>
                 </div>
             </div>
+            <div class="tech-stack">
+                <span class="tech-label">Stack:</span>
+                <span class="tech-item">Python</span>
+                <span class="tech-item">LangChain</span>
+                <span class="tech-item">LangGraph</span>
+                <span class="tech-item">DeepAgents</span>
+                <span class="tech-item">DSPy</span>
+                <span class="tech-item">PGVector</span>
+                <span class="tech-item">FastAPI</span>
+                <span class="tech-item">AWS</span>
+                <span class="tech-item">Docker</span>
+                <span class="tech-item">Kubernetes</span>
+                <span class="tech-item">Terraform</span>
+            </div>
         </div>
 
         <div class="experiences-item">
             <div class="experiences-header">
                 <div>
-                    <h3>Data and Software Engineer</h3>
+                    <h3>Data and Software Engineer (Data Scientist)</h3>
                     <div class="experiences-company">Xerini</div>
                 </div>
                 <div class="experiences-meta">
@@ -105,11 +119,11 @@
                 <span class="tech-item">Azure</span>
             </div>
             <ul class="achievements">
-                <li><strong>Search Classification:</strong> Led end-to-end development of a Natural Language Processing system using GRU-based language models for job search optimization, improving search relevancy by over 90%.</li>
-                <li><strong>3D Defect Classification:</strong> Utilized the InceptionNet architecture to create an image classification model, achieving a 90% recall rate for detecting 3D defects.</li>
-                <li><strong>Symptom Classification:</strong> Fine-tuned an SFT Llama 2 model for symptom classification from doctor notes, achieving 91% accuracy.</li>
-                <li><strong>Agentic Document Retrieval System:</strong> Built a native chatbot (non-LangChain, etc.) with a Retrieval-Augmented Generation (RAG) system for a large document set (20k+ documents).</li>
-                <li><strong>Cargo Optimization:</strong> Optimized logistics operations by implementing genetic algorithms, achieving 99% placement efficiency.</li>
+                <li><strong>Job Search Relevancy:</strong> Led end-to-end development of a Natural Language Processing system using GRU-based language models for job search optimization.</li>
+                <li><strong>3D Defect Classification (showcase prototype):</strong> Utilized the InceptionNet architecture to create an image classification model, achieving a 90% recall rate for detecting 3D defects.</li>
+                <li><strong>Symptom Classification:</strong> Fine-tuned an SFT Llama 2 model for symptom classification from doctor notes, achieving 93.8% accuracy.</li>
+                <li><strong>Agentic Document Retrieval System:</strong> Built a native ReAct-style chatbot (non-LangChain, etc.) with a Retrieval-Augmented Generation (RAG) system for a large document set (20k+ documents).</li>
+                <li><strong>Cargo Optimization:</strong> Optimized logistics operations by implementing genetic algorithms, with 99% of placements meeting loading constraints.</li>
             </ul>
         </div>
 
@@ -155,7 +169,7 @@
                     <h3>University of Tokyo, Japan</h3>
                     <span class="date">Apr 2020 – Mar 2022</span>
                 </div>
-                <p class="degree">Master in Computer Science · School of Information Science and Technology</p>
+                <p class="degree">Master of Information Science and Technology in Computer Science · School of Information Science and Technology</p>
                 <div class="thesis-box">
                     <p class="thesis"><strong>Thesis:</strong> Correlated Topic Model with Transformer Embeddings<br><strong>Supervised by:</strong> Dr. Akihiko Takano</p>
                 </div>
@@ -226,14 +240,11 @@
             <div class="project">
                 <div class="project-top">
                     <div class="project-title-row">
-                        <h3><a href="https://github.com/cwleung/TECTM" target="_blank" rel="noopener noreferrer">Correlated Topic Model (TECTM)</a></h3>
-                        <a href="https://github.com/cwleung/TECTM" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repository">
-                            <svg class="action-icon" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        </a>
+                        <h3>Correlated Topic Model (TECTM)</h3>
                     </div>
                     <p class="project-desc">Enhanced topic modeling incorporating transformer representations, evaluated systematically on 20,000+ documents.</p>
                     <ul>
-                        <li>4% improvement in topic coherence scores</li>
+                        <li>~5% higher topic coherence than ETM on 20 Newsgroups (0.200 vs 0.191, k=20)</li>
                         <li>Integration of transformer embeddings with traditional generative topic models</li>
                     </ul>
                 </div>
@@ -242,15 +253,12 @@
             <div class="project">
                 <div class="project-top">
                     <div class="project-title-row">
-                        <h3><a href="https://github.com/cwleung/DTMTIR" target="_blank" rel="noopener noreferrer">Dynamic Topic Modeling (GPLVM)</a></h3>
-                        <a href="https://github.com/cwleung/DTMTIR" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repository">
-                            <svg class="action-icon" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        </a>
+                        <h3>Dynamic Topic Modeling (GPLVM)</h3>
                     </div>
                     <p class="project-desc">Advanced dynamic topic modeling utilizing Gaussian Process Latent Variable Models for non-linear temporal dynamics.</p>
                     <ul>
                         <li>Custom kernel configurations for temporal and spatial document information</li>
-                        <li>4% improvement in topic coherence scores</li>
+                        <li>Higher topic coherence than D-ETM: 0.092 vs 0.076 on UN Debates and 0.136 vs 0.120 on NeurIPS</li>
                     </ul>
                 </div>
             </div>
@@ -318,7 +326,7 @@
                     <span class="author-self">Chun-Wa Leung</span>, <span>Akihiko Takano</span>, <span>Takeshi Abekawa</span>
                 </div>
                 <div class="pub-footer">
-                    <span class="pub-venue">Pre-print, 2021</span>
+                    <span class="pub-venue">Preprint, 2021</span>
                     <a href="https://drive.google.com/file/d/1sJVp_e2T59oNLUBZ8ufzaIaUBVyVv4qf/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="pub-action-link">
                         View Paper ↗
                     </a>
@@ -338,7 +346,7 @@
                     <span class="author-self">Chun-Wa Leung</span>, <span>Akihiko Takano</span>, <span>Takeshi Abekawa</span>
                 </div>
                 <div class="pub-footer">
-                    <span class="pub-venue">Pre-print, 2022</span>
+                    <span class="pub-venue">Preprint, 2022</span>
                     <a href="https://drive.google.com/file/d/1iDyQNNYprh7Q_dBmeMMAKXU1dilBwiAv/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="pub-action-link">
                         View Paper ↗
                     </a>
